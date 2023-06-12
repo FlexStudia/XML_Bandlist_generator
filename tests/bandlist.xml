@@ -1,0 +1,2524 @@
+<?xml version='1.0' encoding='utf-8'?>
+<import xmlns="http://sshade.eu/schema/import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="bandlist" ssdm_version="0.9.1" xsi:schemaLocation="http://sshade.eu/schema/import http://sshade.eu/schema/import-0.9.xsd">
+  <bandlist>
+    <!-- multiple -->
+    <!-- BAND LIST IMPORT MODE AND INDEXES -->
+    <import_mode>first import</import_mode>
+    <!-- **ABS MANDATORY** Mode of import of 'bandlist' data. Enum: {first import, ignore, draft, no change, correction, invalidate} -->
+    <uid>BANDLIST_RAMAN_HC3N_HC3N-I</uid>
+    <!-- **ABS MANDATORY to CREATE** Unique identifier code given to the band list. Should be of the style ‘BANDLIST_Type_Molecule_Constituent’.  ‘Type’: 'ABS-R’, ‘REFL’, ‘THERM’ or ‘FLUO’; ‘Molecule’: general formula; ‘Constituent’: short description of the constituent (alphanumeric and '_', '-') -->
+    <!-- BAND LIST DESCRIPTION -->
+    <type>Raman scattering</type>
+    <!-- **ABS MANDATORY** Type of band list. Enum: {absorption, Raman scattering, reflectance, thermal emission, fluorescence emission} -->
+    <title>Raman band list of HC3N in natural solid HC3N (phase I)</title>
+    <!-- **ABS MANDATORY, requested for DOI** Title describing the band list. It should contain complete info on the band list type, the spectral range types, the specie, the constituent type and composition. It can also contain info on the environment parameters. This title is very important as it will be the title of the data reference generated from the DOI -->
+    <description>MIR-FIR Raman band list of $HC_3N$ in natural solid $HC_3N$ (phase I) at 35 and 95 K</description>
+    <!-- **MANDATORY, recommended for DOI** Detailled description of the band list. It should contain complete info on the band list type, on typical spectral ranges covered, on the specie and constituent of this band list, as well as on the environment parameters (with values or range of values). Information on possible variations of the constituent may be also given [blob] -->
+    <!-- BANDLIST: SPECTRAL RANGES -->
+    <parameters_spectral>
+      <!-- **ABS MANDATORY** -->
+      <unit>cm-1</unit>
+      <!-- **ABS MANDATORY** Unit of the position and width spectral parameters of the bands. Enum: {m-1, cm-1, angstrom, nm, micron, mm, m, km, Hz, kHz, MHz, GHz, eV, keV} -->
+      <standard>vacuum</standard>
+      <!-- **ABS MANDATORY** Medium in which the wavenumber/wavelength/frequency scale is given. Enum: {vacuum, air, unknown} -->
+      <range_types>
+        <type>FIR</type>
+        <type>MIR</type>
+      </range_types>
+      <ranges>
+        <range>
+          <min>150</min>
+          <max>3200</max>
+        </range>
+      </ranges>
+      <comments></comments>
+      <!-- Additional information on spectral parameters: special range type, ... [blob] -->
+    </parameters_spectral>
+    <!-- BANDLIST: INTENSITY MODES AND UNITS -->
+    <reference_position>
+      <electronic></electronic>
+      <!-- **MANDATORY for electronic bands when band_xxx_intensity_relative used** Reference position of the band to which the relative intensities of electronic bands are calculated (in 'spectral_unit') [Float] -->
+      <infrared>883.2</infrared>
+      <!-- **MANDATORY for infrared and Raman bands when band_xxx_intensity_relative used** Reference position of the band to which the relative intensities of infrared active bands are calculated (in 'spectral_unit') [Float] -->
+    </reference_position>
+    <!-- BAND LIST: CONSTITUENT AND SPECIE -->
+    <constituent>
+      <uid>CONST_solid_HC3N-I</uid>
+      <!-- **ABS MANDATORY** LINK to the existing UID of the “(basic) constituent” of the band list ['CONST_AB_yyyymmdd_123...']. The description of the constituent should reflect any range of composition values -->
+      <primary_specie_uid>MOLEC_HC3N</primary_specie_uid>
+      <!-- **ABS MANDATORY and only for molecular solids** LINK to the existing UID of the “primary molecular specie” of the constituent of the band list ['CONST_AB_yyyymmdd_123...'] -->
+      <comments></comments>
+      <!-- Additional information on the constituent (fundamental phase , …) and on the specie (composition, state, ...), in particular describe the parameters that change over the band list and the range of values spanned for the different bands [blob] -->
+    </constituent>
+    <!-- BANDLIST: HISTORY AND VERSION -->
+    <previous_version>
+      <status></status>
+      <!-- **ABS MANDATORY and only for band_import_mode={new version, invalidate}**  Validity status of the previous version of the band list. Enum: {obsolete version, partly invalidated version, invalidated version, partly invalidated data, invalidated data) -->
+      <comments></comments>
+      <!-- **ABS MANDATORY and only for band_import_mode={new version, invalidate}** Description of the reason for the change of version or for the data invalidation [blob] -->
+    </previous_version>
+    <history></history>
+    <!-- Short description of the history of bandlist import, upgrade or correction (1 line max) that will be added to the 'date + import mode + version number' default info [blob] -->
+    <!-- BANDLIST: PARENT SPECTRA -->
+    <parent_experiments>
+      <uid></uid>
+    </parent_experiments>
+    <parent_spectra>
+      <uid></uid>
+    </parent_spectra>
+    <parent_spectra_comments></parent_spectra_comments>
+    <!-- Comments on parent spectra of the band list [blob] -->
+    <!-- BANDLIST: ANALYSIS AND VALIDATION -->
+    <analysis>currently limited to the data of Pezolet and Savoie (1969) and Müller et al. (1993)</analysis>
+    <!-- **MANDATORY** General description of the band analysis method(s) for the bandlist (ex: spectrum baseline correction + band fit (function, wavelength range, …); different sources of data, ...) [blob] -->
+    <comments>blabla bandlist</comments>
+    <!-- General comments on the bandlist, measurements conditions or analysis [blob] -->
+    <quality_flag>3</quality_flag>
+    <!-- **MANDATORY** Global quality flag on the band list. Can have mostly 6 quality levels from ‘0’: “no valid data” to ‘5’: “excellent data”. Enum: {0, 1, 2, 3, 4, 5} [Integer] -->
+    <date_validated>2021-08-14</date_validated>
+    <!-- **MANDATORY** Validation date of the version of the band list [Format: 'YYYY-MM-DD'] -->
+    <validators>
+      <experimentalist_uid>EXPER_Bernard_Schmitt</experimentalist_uid>
+    </validators>
+    <!-- BANDLIST: DOCUMENTATIONS -->
+    <documentations>
+      <documentation>
+        <name>encyclopedia</name>
+        <filename>encyclopedia.pdf</filename>
+      </documentation>
+      <documentation>
+        <name>encyclopedia_2</name>
+        <filename>encyclopedia_2.pdf</filename>
+      </documentation>
+    </documentations>
+    <!-- BANDLIST: FILES -->
+    <original_data_filename>bandlist_ABS_Raman_full_v092a.xlsx</original_data_filename>
+    <!-- Name of the file (with extension: .txt, .doc, .rtf, ...) containing the original data of the band list. This file should be zipped with the xml file -->
+    <export_filename>bandlist_Raman_HC3N-in-HC3N-I</export_filename>
+    <!-- **ABS MANDATORY** Generic name of the band list data and metadata files and preview image for data export (will get different extensions: .dat, .txt, .xml… depending on the export format chosen by user). Do not use blank(space) in this name -->
+    <!-- BANDLIST PREVIEW -->
+    <preview>
+      <x axis="" unit="cm-1" min="0" max="3300"></x>
+      <!-- Type of X axis and min/max values in the preview plot of the band list. For 'axis': Enum: {lin, log}; For 'unit': Enum: {m-1, cm-1, angstrom, nm, micron, mm, m, km, Hz, kHz, MHz, GHz, eV, keV}; For 'min/max': [float] -->
+      <y axis="" unit="" min="" max=""></y>
+      <!-- Type of Y axis, unit, and min/max values in the absorption coefficient preview plot of the band list. For 'axis': Enum: {lin, log}; For 'unit': OpenEnum: {cm-1}; For 'min/max': [float] -->
+      <yrel axis="lin" min="5" max="13"></yrel>
+      <!-- Type of Y axis and min/max values in the relative intensity preview plot of the band list. For 'axis': Enum: {lin, log}; For 'min/max': [float] -->
+      <type>abscoef</type>
+      <!-- Flag telling which plot is used as the preview, in place of the default one. Enum: {absorption coefficient, relative intensity} -->
+      <!-- OR -->
+      <filename></filename>
+      <!-- **Include the full 'bandlist_title' on top of the figure and provide the image file with a size around 650x460 pixels** Name of the file (with only .png, .jpg, (.gif) extensions) containing the preview plot of the band list to be displayed (otherwise automatically generated during import). This image file should be zipped with the xml file -->
+    </preview>
+    <!-- BANDLIST: STRUCTURE -->
+    <structure>
+      <!-- **STRONGLY RECOMMENDED when there are several types of transitions as well as isotopic species** -->
+      <!-- This structure is used to organize the bandlist in sections and subsections, in particular when we want to separate ‘absorption’ bands and ‘Raman’ bands, and also to separate the different isotopes of a molecule. The bandlist, the sections and the subsections will be displayed in SSHADE in the order and with the structure defined here together with their title and the information on their type of variable parameters (band type, isotope, band transition category). The section and subsection titles are subtitles of the general title of the bandlist ('bandlist_title') -->
+      <!-- SECTIONS -->
+      <sections variable_parameter="band transition category">
+        <section>
+          <title>Phonon modes</title>
+          <description>FIR Raman phonon bands of solid $HC_3N$-I</description>
+          <bands>
+            <band_uid>BAND_RAMAN_HC3N_HC3N-I_86</band_uid>
+            <band_uid>BAND_RAMAN_HC3N_HC3N-I_94</band_uid>
+            <band_uid>BAND_RAMAN_HC3N_HC3N-I_106</band_uid>
+          </bands>
+        </section>
+        <section>
+          <title>Fundamental vibration modes</title>
+          <description>MIR Raman fundamental vibration bands of the isotopes of $HC_3N$ in natural solid $HC_3N$-I</description>
+          <!-- SUBSECTIONS -->
+          <subsections variable_parameter="isotope">
+            <subsection>
+              <title>$H^{12}C_3~^{14}N$</title>
+              <description>Fundamental vibration modes of the $H^{12}C_3~^{14}N$ isotope in natural solid $HC_3N$-I</description>
+              <bands>
+                <band_uid>BAND_RAMAN_HC3N_HC3N-I_228</band_uid>
+                <band_uid>BAND_RAMAN_HC3N_HC3N-I_506</band_uid>
+              </bands>
+            </subsection>
+            <subsection>
+              <title>$H^{13}C_3~^{14}N$</title>
+              <description></description>
+              <bands>
+                <band_uid>BAND_RAMAN_HC3N_HC3N-I_760</band_uid>
+                <band_uid>BAND_RAMAN_HC3N_HC3N-I_883</band_uid>
+              </bands>
+            </subsection>
+          </subsections>
+        </section>
+      </sections>
+    </structure>
+    <!-- ******************************************************************* -->
+    <!-- BANDS -->
+    <bands>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_86</uid>
+        <comments>blabla bands</comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_L (B_u)$</label>
+            <symmetry_label>Bu</symmetry_label>
+            <category>rotation</category>
+            <method>blabla method</method>
+            <level>partly assigned</level>
+            <evaluation>undefined</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments>From Ennis et al. 2018</comments>
+            <multiplicities>
+              <multiplicity>
+                <type>accidental degeneracy</type>
+                <degeneracy>accidental triple</degeneracy>
+                <other_band_uid>BAND_ABS_SO2_1234</other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level>major</contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments>blabla multiplicity</contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label>A2</label>
+                      <symmetry_label>$B_u$</symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label>A2</label>
+                  </crystal_sites>
+                  <sites_comments>blabla transition</sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label>Ez</label>
+                  <type>ligand-to-metal charge-transfer</type>
+                </mode>
+                <comments>blabla electronic</comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_5$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CtCH</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments>blabla vibrqtion</comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label>$\nu_L$</label>
+                  <type>libration</type>
+                </mode>
+                <comments>$A_u$</comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label>TO</label>
+                  <type>transverse optic translation</type>
+                </mode>
+                <comments>blabla phonon</comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type>Fermi resonance</type>
+                <band_uid>BAND_ABS_SO2_SO2-I_5046</band_uid>
+                <band_assignment_number>1</band_assignment_number>
+                <comments>blabla resonance</comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments>pure</composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments>blabla temperature</comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>1</value>
+                  <error>0.001</error>
+                  <formation>1</formation>
+                  <max>5</max>
+                  <stress_type>normal uniaxial tension</stress_type>
+                  <comments>blabla pressure</comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>25deg</sample_orientation>
+              <polarization_orientation_mode>polarized</polarization_orientation_mode>
+              <polarization_orientation>45deg</polarization_orientation>
+              <comments>blabla excitation</comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>data extrapolation</type>
+                <description>blabla method</description>
+                <fit_function>
+                  <type>Lorentzian</type>
+                  <parameters>fit parameters = xx</parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>86</peak>
+              <peak_error>1</peak_error>
+              <center_method>first derivative</center_method>
+              <center>87</center>
+              <center_error>1</center_error>
+              <evaluation>validated</evaluation>
+              <comments>blabla position</comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fit fwhm</method>
+              <fwhm>5</fwhm>
+              <fwhm_error>0.5</fwhm_error>
+              <shape>sharp shoulder</shape>
+              <asymmetry_factor>0.999</asymmetry_factor>
+              <asymmetry_factor_error>0.005</asymmetry_factor_error>
+              <evaluation>not recommended</evaluation>
+              <comments>blabla width</comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>extrapolated</method>
+              <abscoef>12030</abscoef>
+              <abscoef_error>130</abscoef_error>
+              <abscoef_specific>15000</abscoef_specific>
+              <abscoef_specific_error>200</abscoef_specific_error>
+              <relative>0.56</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments>blabla peak I</comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>extrapolated</method>
+              <abscoef>340000000</abscoef>
+              <abscoef_error>4000000</abscoef_error>
+              <abscoef_specific>500000000</abscoef_specific>
+              <abscoef_specific_error>50000000</abscoef_specific_error>
+              <relative>.454</relative>
+              <relative_error>.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments>blabla int. I</comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments>pure</composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>random</sample_orientation_mode>
+              <sample_orientation>unknown</sample_orientation>
+              <polarization_orientation_mode>depolarized</polarization_orientation_mode>
+              <polarization_orientation>no</polarization_orientation>
+              <comments>blabla excitation</comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>86</peak>
+              <peak_error>1</peak_error>
+              <center_method>higher order derivative</center_method>
+              <center>88</center>
+              <center_error>1</center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method></method>
+              <fwhm>NULL</fwhm>
+              <fwhm_error></fwhm_error>
+              <shape>sharp shoulder</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>PUBLI_DelloRusso_1996</publication_uid>
+          <publication_uid>PUBLI_Moore_2010</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid>SPECTRUM_BS_20210813_001</spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link>10.26302/SSHADE/EXPERIMENT_OP_20230220_001</link>
+        </data_publication_links>
+        <publication_comments>from numerical spectra</publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_94</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_L (A_u)$</label>
+            <symmetry_label>Au</symmetry_label>
+            <category>rotation</category>
+            <method></method>
+            <level>partly assigned</level>
+            <evaluation>undefined</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments>From Ennis et al. 2018</comments>
+            <multiplicities>
+              <multiplicity>
+                <type>no</type>
+                <degeneracy></degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label>$A_u$</symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label>Ez</label>
+                  <type>ligand-to-metal charge-transfer</type>
+                </mode>
+                <comments>blabla electronic</comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                  <chemical_bonds>
+                    <uid></uid>
+                  </chemical_bonds>
+                </mode>
+                <comments>blabla vibrqtion</comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label>$\nu_L$</label>
+                  <type>libration</type>
+                </mode>
+                <comments>$A_u$</comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments>blabla phonon</comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>unknown</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>other</peak_method>
+              <peak>94</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method></method>
+              <fwhm>NULL</fwhm>
+              <fwhm_error></fwhm_error>
+              <shape>sharp shoulder</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>25deg</sample_orientation>
+              <polarization_orientation_mode>depolarized</polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>other</peak_method>
+              <peak>95</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method></method>
+              <fwhm>NULL</fwhm>
+              <fwhm_error></fwhm_error>
+              <shape>sharp shoulder</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>extrapolated</method>
+              <abscoef>NULL</abscoef>
+              <abscoef_error></abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative></relative>
+              <relative_error></relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>NULL</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid>SPECTRUM_BS_20210813_001</spectrum_uid>
+          <spectrum_uid>SPECTRUM_BS_20210813_002</spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link></link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_106</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_L (B_g)$ ?</label>
+            <symmetry_label>Bg</symmetry_label>
+            <category>rotation</category>
+            <method></method>
+            <level>uncertain assignment</level>
+            <evaluation>undefined</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments>From Ennis et al. 2018: IR inactive ?</comments>
+            <multiplicities>
+              <multiplicity>
+                <type>no</type>
+                <degeneracy></degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label>$B_g$ ?</symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                  <chemical_bonds>
+                    <uid></uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label>$\nu_L$</label>
+                  <type>libration</type>
+                </mode>
+                <comments>$B_g$ ?</comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>30deg</sample_orientation>
+              <polarization_orientation_mode>polarized</polarization_orientation_mode>
+              <polarization_orientation>45deg</polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>106</peak>
+              <peak_error>2</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>hwhm</method>
+              <fwhm>40</fwhm>
+              <fwhm_error>2</fwhm_error>
+              <shape>asymmetric</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>peak intensity</method>
+              <abscoef>720</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.026</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>28800</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.0405</relative>
+              <relative_error>NULL</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>30deg</sample_orientation>
+              <polarization_orientation_mode>unknown</polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>strongly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>104</peak>
+              <peak_error>2</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>hwhm</method>
+              <fwhm>34</fwhm>
+              <fwhm_error>2</fwhm_error>
+              <shape>asymmetric</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>peak intensity</method>
+              <abscoef>870</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.032</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>29580</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.044</relative>
+              <relative_error>NULL</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>NULL</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid></spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link>10.26302/SSHADE/EXPERIMENT_OP_20230220_001</link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_228</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_7$</label>
+            <symmetry_label>Au</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_7$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CtCC</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+          <assignment>
+            <number>2</number>
+            <label>$\nu_7$</label>
+            <symmetry_label>Bu</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_7$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CtCC</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>NULL</sample_orientation>
+              <polarization_orientation_mode>polarized</polarization_orientation_mode>
+              <polarization_orientation>NULL</polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>228</peak>
+              <peak_error>2</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>13</fwhm>
+              <fwhm_error>3</fwhm_error>
+              <shape>asymmetric</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>100</abscoef>
+              <abscoef_error>20</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.0036</relative>
+              <relative_error>0.001</relative_error>
+              <strength>m</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>1300</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.00183</relative>
+              <relative_error>NULL</relative_error>
+              <strength>m</strength>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>oriented</sample_orientation_mode>
+              <sample_orientation>25deg</sample_orientation>
+              <polarization_orientation_mode>polarized</polarization_orientation_mode>
+              <polarization_orientation>45deg</polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>228</peak>
+              <peak_error>2</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>13</fwhm>
+              <fwhm_error>3</fwhm_error>
+              <shape>asymmetric</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>80</abscoef>
+              <abscoef_error>20</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.003</relative>
+              <relative_error>0.001</relative_error>
+              <strength>m</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>1040</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.00154</relative>
+              <relative_error>NULL</relative_error>
+              <strength>m</strength>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>PUBLI_DelloRusso_1996</publication_uid>
+          <publication_uid>PUBLI_Moore_2010</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid></spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link></link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_506</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_6$</label>
+            <symmetry_label>Au</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_6$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CCtN</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+          <assignment>
+            <number>2</number>
+            <label>$\nu_6$</label>
+            <symmetry_label>Bu</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_6$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CCtN</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>NULL</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>slightly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>506.3</peak>
+              <peak_error>0.3</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>6</fwhm>
+              <fwhm_error>0.2</fwhm_error>
+              <shape>symmetric</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>peak intensity</method>
+              <abscoef>4150</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.149</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>24900</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.035</relative>
+              <relative_error>NULL</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>NULL</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode>polarized</polarization_orientation_mode>
+              <polarization_orientation>25deg</polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>slightly blended</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>506.3</peak>
+              <peak_error>0.3</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>5.7</fwhm>
+              <fwhm_error>0.2</fwhm_error>
+              <shape>symmetric</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>peak intensity</method>
+              <abscoef>4150</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.154</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>23655</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.035</relative>
+              <relative_error>NULL</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>PUBLI_DelloRusso_1996</publication_uid>
+          <publication_uid>PUBLI_Moore_2010</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid></spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link></link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_760</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_5$</label>
+            <symmetry_label>Au</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_5$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CtCH</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+          <assignment>
+            <number>2</number>
+            <label>$\nu_5$</label>
+            <symmetry_label>Bu</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>mode degeneracy</type>
+                <degeneracy>double</degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_5$</label>
+                  <type>bending</type>
+                  <chemical_bonds>
+                    <uid>MOLECPART_CtCH</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>unoriented</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>760</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>20.5</fwhm>
+              <fwhm_error>0.5</fwhm_error>
+              <shape>asymmetric low frequency wing</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>5400</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.194</relative>
+              <relative_error>0.002</relative_error>
+              <strength>vs</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>110700</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.156</relative>
+              <relative_error>NULL</relative_error>
+              <strength>vs</strength>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>unoriented</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>757</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>21</fwhm>
+              <fwhm_error>0.5</fwhm_error>
+              <shape>asymmetric low frequency wing</shape>
+              <asymmetry_factor>NULL</asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>5150</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.191</relative>
+              <relative_error>0.002</relative_error>
+              <strength>vs</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>108150</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.161</relative>
+              <relative_error>NULL</relative_error>
+              <strength>vs</strength>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>PUBLI_DelloRusso_1996</publication_uid>
+          <publication_uid>PUBLI_Moore_2010</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid></spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link></link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+      <band>
+        <import_mode>first import</import_mode>
+        <uid>BAND_RAMAN_HC3N_HC3N-I_883</uid>
+        <comments></comments>
+        <!-- TRANSITION ASSIGNMENTS AND MODES -->
+        <assignments>
+          <assignment>
+            <number>1</number>
+            <label>$\nu_4$</label>
+            <symmetry_label>Bu</symmetry_label>
+            <category>fundamental vibration</category>
+            <method></method>
+            <level>fully assigned</level>
+            <evaluation>validated</evaluation>
+            <!-- TRANSITION: MULTIPLICITY AND DEGENERACY -->
+            <comments></comments>
+            <multiplicities>
+              <multiplicity>
+                <type>no</type>
+                <degeneracy></degeneracy>
+                <other_band_uid></other_band_uid>
+              </multiplicity>
+            </multiplicities>
+            <contribution_level></contribution_level>
+            <!-- TRANSITION MODES -->
+            <contribution_comments></contribution_comments>
+            <!-- TRANSITION: RESONANCES -->
+            <transition>
+              <primary_species>
+                <primary_specie>
+                  <uid>MOLEC_HC3N</uid>
+                  <crystal_molecule_sites>
+                    <site>
+                      <label></label>
+                      <symmetry_label></symmetry_label>
+                    </site>
+                  </crystal_molecule_sites>
+                  <crystal_sites>
+                    <label></label>
+                  </crystal_sites>
+                  <sites_comments></sites_comments>
+                </primary_specie>
+              </primary_species>
+              <!-- TRANSITION: ELECTRONIC -->
+              <electronic_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </electronic_modes>
+              <!-- TRANSITION: VIBRATION MODES -->
+              <vibration_modes>
+                <mode>
+                  <label>$\nu_4$</label>
+                  <type>stretching</type>
+                  <chemical_bonds>
+                    <uid>BOND_tCCt</uid>
+                  </chemical_bonds>
+                </mode>
+                <comments></comments>
+              </vibration_modes>
+              <!-- TRANSITION: ROTATION MODES -->
+              <rotation_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </rotation_modes>
+              <!-- TRANSITION: PHONON MODES -->
+              <phonon_modes>
+                <mode>
+                  <label></label>
+                  <type></type>
+                </mode>
+                <comments></comments>
+              </phonon_modes>
+            </transition>
+            <resonances>
+              <resonance>
+                <type></type>
+                <band_uid></band_uid>
+                <band_assignment_number></band_assignment_number>
+                <comments></comments>
+              </resonance>
+            </resonances>
+          </assignment>
+        </assignments>
+        <!-- ENVIRONMENT AND CHARACTERISTICS -->
+        <characteristics>
+          <characteristic>
+            <number>1</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>35</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>633</laser_wavelength>
+              <sample_orientation_mode>NULL</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>883</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>7</fwhm>
+              <fwhm_error>0.2</fwhm_error>
+              <shape>symmetric</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>1050</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.038</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>7350</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.0103</relative>
+              <relative_error>NULL</relative_error>
+              <strength>m</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>yes</bandlist_nominal_flag>
+          </characteristic>
+          <characteristic>
+            <number>2</number>
+            <!-- CONSTITUENT -->
+            <constituent>
+              <composition_comments></composition_comments>
+              <texture_comments>film</texture_comments>
+              <parameters_environment>
+                <temperature>
+                  <unit>K</unit>
+                  <value>95</value>
+                  <error>1</error>
+                  <formation>50</formation>
+                  <max>110</max>
+                  <comments></comments>
+                </temperature>
+                <pressure>
+                  <unit>bar</unit>
+                  <value>NULL</value>
+                  <error></error>
+                  <formation></formation>
+                  <max></max>
+                  <stress_type></stress_type>
+                  <comments></comments>
+                </pressure>
+              </parameters_environment>
+            </constituent>
+            <!-- EXCITATION LIGHT -->
+            <excitation>
+              <laser_wavelength>514</laser_wavelength>
+              <sample_orientation_mode>NULL</sample_orientation_mode>
+              <sample_orientation></sample_orientation>
+              <polarization_orientation_mode></polarization_orientation_mode>
+              <polarization_orientation></polarization_orientation>
+              <comments></comments>
+            </excitation>
+            <!-- CHARACTERISTICS METHODS -->
+            <methods>
+              <method>
+                <type>spectrum measurement</type>
+                <description></description>
+                <fit_function>
+                  <type></type>
+                  <parameters></parameters>
+                </fit_function>
+              </method>
+            </methods>
+            <!-- OVERLAP -->
+            <overlap>isolated</overlap>
+            <!-- POSITION -->
+            <position>
+              <peak_method>peak</peak_method>
+              <peak>883</peak>
+              <peak_error>1</peak_error>
+              <center_method></center_method>
+              <center></center>
+              <center_error></center_error>
+              <evaluation>validated</evaluation>
+              <comments></comments>
+            </position>
+            <!-- WIDTH -->
+            <width>
+              <method>fwhm</method>
+              <fwhm>7.4</fwhm>
+              <fwhm_error>0.2</fwhm_error>
+              <shape>symmetric</shape>
+              <asymmetry_factor></asymmetry_factor>
+              <asymmetry_factor_error></asymmetry_factor_error>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </width>
+            <!-- INTENSITY -->
+            <peak_intensity>
+              <method>baseline corrected peak intensity</method>
+              <abscoef>1050</abscoef>
+              <abscoef_error>50</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.038</relative>
+              <relative_error>0.002</relative_error>
+              <strength>s</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </peak_intensity>
+            <!-- INTEGRATED INTENSITY -->
+            <integrated_intensity>
+              <method>width x peak intensity</method>
+              <abscoef>7770</abscoef>
+              <abscoef_error>NULL</abscoef_error>
+              <abscoef_specific></abscoef_specific>
+              <abscoef_specific_error></abscoef_specific_error>
+              <relative>0.0115</relative>
+              <relative_error>NULL</relative_error>
+              <strength>m</strength>
+              <evaluation>undefined</evaluation>
+              <comments></comments>
+            </integrated_intensity>
+            <!-- BANDLIST PREVIEW -->
+            <bandlist_nominal_flag>no</bandlist_nominal_flag>
+          </characteristic>
+        </characteristics>
+        <!-- REFERENCES -->
+        <publications>
+          <publication_uid>PUBLI_DelloRusso_1996</publication_uid>
+          <publication_uid>PUBLI_Moore_2010</publication_uid>
+        </publications>
+        <data_publication_spectra>
+          <spectrum_uid></spectrum_uid>
+        </data_publication_spectra>
+        <data_publication_links>
+          <link></link>
+        </data_publication_links>
+        <publication_comments></publication_comments>
+      </band>
+    </bands>
+  </bandlist>
+</import>
